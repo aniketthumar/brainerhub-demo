@@ -264,3 +264,6 @@ __pycache__/
 *.pyc
 Properties
 
+/BrainerHubDemoService/obj/Debug/net7.0/BrainerHubDemoService.csproj.AssemblyReference.cache
+/BrainerHubDemoSample/obj/Debug/net7.0/BrainerHubDemo.csproj.AssemblyReference.cache
+/.vs/BrainerHubDemo/v17/.suo
