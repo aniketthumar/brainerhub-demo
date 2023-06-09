@@ -1,0 +1,1070 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>POCSampleModel</name>
+    </assembly>
+    <members>
+        <member name="T:POCSampleModel.CustomModels.ISearchResult`1">
+            <summary>
+            SearchResult
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.ISearchResult`1.Meta">
+            <summary>
+            The string that assign as Meta
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.ISearchResult`1.Results">
+            <summary>
+            The string that assign as Results
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.CustomModels.Page">
+            <summary>
+            Page
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.CustomModels.Page.#ctor">
+            <summary>
+            Initialization Page
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.Page.Meta">
+            <summary>
+            Initialization Meta
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.Page.Result">
+            <summary>
+            Initialization Result
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.CustomModels.SearchPage`1">
+            <summary>
+            SearchPage
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:POCSampleModel.CustomModels.SearchPage`1.#ctor">
+            <summary>
+            Initialization SearchPage
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.SearchPage`1.Meta">
+            <summary>
+            Initialization Meta
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.SearchPage`1.List">
+            <summary>
+            Initialization List
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.CustomModels.Meta">
+            <summary>
+            Meta
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.Meta.Page">
+            <summary>
+            The current page number. the first page is 1.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.Meta.PageSize">
+            <summary>
+            Page size of the result set.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.Meta.Key">
+            <summary>
+            Resource key name.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.Meta.Url">
+            <summary>
+            The URL of the current page.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.Meta.FirstPageUrl">
+            <summary>
+            The URL for the first page of this list.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.Meta.PreviousPageUrl">
+            <summary>
+            The URL for the previous page of this list.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.Meta.NextPageUrl">
+            <summary>
+            The URL for the next page of this list.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.Meta.TotalResults">
+            <summary>
+            Total Count of results.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.Meta.TotalPages">
+            <summary>
+            Total No of pages of the result set.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.Meta.NextPageExists">
+            <summary>
+            Total No of pages of the NextPageExists.
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.CustomModels.SearchRequestModel">
+            <summary>
+            SearchRequestModel
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.CustomModels.SearchRequestModel.#ctor">
+            <summary>
+            Initialization SearchRequestModel
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.SearchRequestModel.SearchText">
+            <summary>
+            Search string to look up for matching results. 
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.SearchRequestModel.Page">
+            <summary>
+            Expected page number in the result set.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.SearchRequestModel.PageSize">
+            <summary>
+            Page size of the result set.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.SearchRequestModel.SortColumn">
+            <summary>
+            The column / attribute by which the results shall be sorted.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.SearchRequestModel.SortOrder">
+            <summary>
+            The order by which the results shall be sorted.  Possible values are 'asc' for ascending order, 'desc' for descending order.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.SearchRequestModel.Filters">
+            <summary>
+            Search filter list to look up for matching results. If must be in format '[{key:'keyname',value:'keyvalue'},{key:'keyname',value:'keyvalue'}]'.
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.CustomModels.FilterRequestModel">
+            <summary>
+            FilterRequestModel
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.FilterRequestModel.Key">
+            <summary>
+            The string that assign as Key
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.FilterRequestModel.Condition">
+            <summary>
+            The string that assign as Condition
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.FilterRequestModel.Value">
+            <summary>
+            The string that assign as Value
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.FilterRequestModel.From">
+            <summary>
+            The string that assign as From
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.FilterRequestModel.To">
+            <summary>
+            The string that assign as To
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.FilterRequestModel.Type">
+            <summary>
+            The string that assign as Type
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.CustomModels.SearchResult`1">
+            <summary>
+            SearchResult
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.SearchResult`1.Results">
+            <summary>
+            Search string to look up for matching results. 
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.SearchResult`1.Meta">
+            <summary>
+            Initialization Meta
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.CustomModels.SpResultModel">
+            <summary>
+            SpResultModel
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.SpResultModel.Id">
+            <summary>
+            The string that assign as Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.CustomModels.SpResultModel.Result">
+            <summary>
+            The string that assign as Result
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.Helper.CommonHelper">
+            <summary>
+            CommonHelper
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.Helper.CommonHelper.DictionaryToXml(System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            DictionaryToXml
+            </summary>
+            <param name="dic"></param>
+            <param name="rootElement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POCSampleModel.Helper.CommonHelper.IsValidJson(System.String)">
+            <summary>
+            IsValidJson
+            </summary>
+            <param name="stringValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:POCSampleModel.Helper.NotFoundResponse">
+            <summary>
+            NotFoundResponse
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.NotFoundResponse.code">
+            <summary>
+            (Conditional) An error code to find help for the exception.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.NotFoundResponse.message">
+            <summary>
+            A more descriptive message regarding the exception.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.NotFoundResponse.status">
+            <summary>
+            The HTTP status code for the exception.
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.Helper.BadRequestResponse">
+            <summary>
+            BadRequestResponse
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.BadRequestResponse.code">
+            <summary>
+            (Conditional) An error code to find help for the exception.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.BadRequestResponse.message">
+            <summary>
+            A more descriptive message regarding the exception.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.BadRequestResponse.status">
+            <summary>
+             The HTTP status code for the exception.
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.Helper.InternalServerErrorReponse">
+            <summary>
+            InternalServerErrorReponse
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.InternalServerErrorReponse.code">
+            <summary>
+            (Conditional) An error code to find help for the exception.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.InternalServerErrorReponse.message">
+            <summary>
+            A more descriptive message regarding the exception.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.InternalServerErrorReponse.status">
+            <summary>
+            The HTTP status code for the exception.
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.Helper.UnauthorizedResponse">
+            <summary>
+            UnauthorizedResponse
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.UnauthorizedResponse.code">
+            <summary>
+            (Conditional) An error code to find help for the exception.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.UnauthorizedResponse.message">
+            <summary>
+            A more descriptive message regarding the exception.
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.UnauthorizedResponse.status">
+            <summary>
+            The HTTP status code for the exception.
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.Helper.Constants">
+            <summary>
+            Constants
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.Helper.Constants.SearchParameters">
+            <summary>
+            SearchParameters
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.SearchParameters.PageSize">
+            <summary>
+            PageSize
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.SearchParameters.ShowMy">
+            <summary>
+            ShowMy
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.SearchParameters.ShowAll">
+            <summary>
+            ShowAll
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.SearchParameters.ModifiedAfter">
+            <summary>
+            ModifiedAfter
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.SearchParameters.RequiredFields">
+            <summary>
+            RequiredFields
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.SearchParameters.Filters">
+            <summary>
+            Filters
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.SearchParameters.ContinuationToken">
+            <summary>
+            ContinuationToken
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.SearchParameters.SortOrder">
+            <summary>
+            SortOrder
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.SearchParameters.SortColumn">
+            <summary>
+            SortColumn
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.SearchParameters.SearchText">
+            <summary>
+            SearchText
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.SearchParameters.PageStart">
+            <summary>
+            PageStart
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.SearchParameters.Conjuction">
+            <summary>
+            Conjuction
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.Helper.Constants.DatabaseErrorCodes">
+            <summary>
+            DatabaseErrorCodes
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.DatabaseErrorCodes.NotExist">
+            <summary>
+            NotExist
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.DatabaseErrorCodes.NotAllowed">
+            <summary>
+            NotAllowed
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.Helper.Constants.Status">
+            <summary>
+            Status
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.Status.Active">
+            <summary>
+            Active
+            </summary>
+        </member>
+        <member name="F:POCSampleModel.Helper.Constants.Status.Inactive">
+            <summary>
+            Inactive
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.Helper.ErrorResult">
+            <summary>
+             ErrorResult
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.ErrorResult.Code">
+            <summary>
+            Code
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.ErrorResult.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.ErrorResult.MoreInfo">
+            <summary>
+            MoreInfo
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.ErrorResult.Status">
+            <summary>
+            Status
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.Helper.FluentErrorResponse">
+            <summary>
+            FluentErrorResponse
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.FluentErrorResponse.Code">
+            <summary>
+            Code
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.FluentErrorResponse.Status">
+            <summary>
+            Status
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.FluentErrorResponse.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.FluentErrorResponse.isFluentError">
+            <summary>
+            isFluentError
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.FluentErrorResponse.Errors">
+            <summary>
+            Errors
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.Helper.HttpStatusCodeException">
+            <summary>
+            HttpStatusCodeException
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.HttpStatusCodeException.StatusCode">
+            <summary>
+            StatusCode
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.HttpStatusCodeException.ContentType">
+            <summary>
+            ContentType
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.Helper.HttpStatusCodeException.Code">
+            <summary>
+            Code
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.Helper.HttpStatusCodeException.#ctor(System.Object,System.Int32)">
+            <summary>
+            HttpStatusCodeException Constructor
+            </summary>
+            <param name="status404NotFound"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:POCSampleModel.Helper.HttpStatusCodeException.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="statusCode"></param>
+            <param name="message"></param>
+            <param name="Code"></param>
+        </member>
+        <member name="M:POCSampleModel.Helper.HttpStatusCodeException.#ctor(System.Int32,System.Exception,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="statusCode"></param>
+            <param name="inner"></param>
+            <param name="Code"></param>
+        </member>
+        <member name="M:POCSampleModel.Helper.HttpStatusCodeException.#ctor(System.Int32,Newtonsoft.Json.Linq.JObject,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="statusCode"></param>
+            <param name="errorObject"></param>
+            <param name="Code"></param>
+        </member>
+        <member name="T:POCSampleModel.POcSampleDB.ContContact">
+            <summary>
+            CONT_Contact_Student
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.RequestModel.StudentListRequestModel">
+            <summary>
+            StudentListRequestModel
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentListRequestModel.StudentID">
+            <summary>
+            The value that assign as Student Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentListRequestModel.StudentContactId">
+            <summary>
+            The value that assign as Student Contact Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentListRequestModel.StudentStatusId">
+            <summary>
+            The value that assign as Student Status Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentListRequestModel.StudentStatusName">
+            <summary>
+            The string that assign as Student Status Name
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentListRequestModel.CurrentContContactID">
+            <summary>
+            The string that assign as Current Cont Contact ID
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentListRequestModel.CurrentUser">
+            <summary>
+            The string that assign as Current User
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.RequestModel.StudentListRequestModelValidator">
+            <summary>
+            StudentListRequestModelValidator
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.RequestModel.StudentListRequestModelValidator.#ctor">
+            <summary>
+            Intializing StudentListRequestModelValidator
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.RequestModel.StudentRequestModel">
+            <summary>
+            StudentRequestModel
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.ContactFirstName">
+            <summary>
+            The string that assign as Contact First Name
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.ContactLastName">
+            <summary>
+            The string that assign as Contact Last Name
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.ContactEmail">
+            <summary>
+            The string that assign as Contact Email
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.ContactPhone">
+            <summary>
+            The string that assign as Contact Phone
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.ContactLocationId">
+            <summary>
+            The value that assign as Contact Location Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.ContactMethodId">
+            <summary>
+            The value that assign as Contact Method Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.ContactMethodName">
+            <summary>
+            The string that assign as Contact Method Name
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.ContactMethodNote">
+            <summary>
+            The string that assign as Contact Method Note
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.StudentStatusId">
+            <summary>
+            The value that assign as Student Status Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.StudentStatusCode">
+            <summary>
+            The string that assign as Student Status Code
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.StudentClassScheduleId">
+            <summary>
+            The value that assign as Student Class Schedule Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.StudentSourceContactId">
+            <summary>
+            The value that assign as Student Source Contact Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.StudentTeacherId">
+            <summary>
+            The value that assign as Student Teacher Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.StudentRecruiterId">
+            <summary>
+            The value that assign as Student Recruiter Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.StudentJobId">
+            <summary>
+            The value that assign as Student Job Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.StudentContactMethodId">
+            <summary>
+            The value that assign as Student Contact Method Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.StudentContactMethod">
+            <summary>
+            The string that assign as Student Contact Method
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.StudentContactMethodNote">
+            <summary>
+            The string that assign as Student Contact Method Note
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.StudentClassificationID">
+            <summary>
+            The string that assign as Student Classification ID
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.CurrentContContactID">
+            <summary>
+            The string that assign as Current Cont Contact ID
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.StudentRequestModel.CurrentUser">
+            <summary>
+            The string that assign as Current User
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.RequestModel.StudentRequestModelValidator">
+            <summary>
+            StudentRequestModelValidator
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.RequestModel.StudentRequestModelValidator.#ctor">
+            <summary>
+            Intializing StudentRequestModelValidator
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.RequestModel.UpdateJobsRequestModel">
+            <summary>
+            UpdateJobsRequestModel
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.UpdateJobsRequestModel.StatusId">
+            <summary>
+            The value that assign as Status Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.UpdateJobsRequestModel.StatusCode">
+            <summary>
+            The string that assign as Status Code
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.UpdateJobsRequestModel.CurrentContactId">
+            <summary>
+            The string that assign as Current Contact Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.UpdateJobsRequestModel.CurrentUser">
+            <summary>
+            The string that assign as Current User
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.RequestModel.UpdateJobsRequestModelValidator">
+            <summary>
+            UpdateJobsRequestModelValidator
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.RequestModel.UpdateJobsRequestModelValidator.#ctor">
+            <summary>
+            Intializing UpdateJobsRequestModelValidator
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.RequestModel.UpdateStudentRequestModel">
+            <summary>
+            UpdateStudentRequestModel
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.UpdateStudentRequestModel.StudentId">
+            <summary>
+            Identity of Student
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.UpdateStudentRequestModel.StudentContactId">
+            <summary>
+            The value that assign as Student Contact Id
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.RequestModel.UpdateStudentRequestModelValidator">
+            <summary>
+            UpdateStudentRequestModelValidator
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.RequestModel.UpdateStudentRequestModelValidator.#ctor">
+            <summary>
+            Intializing UpdateStudentRequestModelValidator
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.RequestModel.UpdateTaskRequestModel">
+            <summary>
+            UpdateTaskRequestModel
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.UpdateTaskRequestModel.Done">
+            <summary>
+            The value that assign as Done
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.UpdateTaskRequestModel.CurrentContContactId">
+            <summary>
+            The string that assign as Current Cont Contact Id
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.RequestModel.UpdateTaskRequestModel.CurrentUser">
+            <summary>
+            The string that assign as Current User
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.RequestModel.UpdateTaskRequestModelValidator">
+            <summary>
+            UpdateTaskRequestModelValidator
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.RequestModel.UpdateTaskRequestModelValidator.#ctor">
+            <summary>
+            Intializing UpdateTaskRequestModelValidator
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.ResponseModel.FluentErrorResponse">
+            <summary>
+            FluentErrorResponse
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.FluentErrorResponse.Code">
+            <summary>
+            Code
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.FluentErrorResponse.Status">
+            <summary>
+            Status
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.FluentErrorResponse.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.FluentErrorResponse.isFluentError">
+            <summary>
+            isFluentError
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.FluentErrorResponse.Errors">
+            <summary>
+            Errors
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.ResponseModel.StudentListResponse">
+            <summary>
+            StudentListResponse
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.StudentListResponse.STUD_StudentID">
+            <summary>
+            STUD_StudentID
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.StudentListResponse.STUD_ContactID">
+            <summary>
+            STUD_ContactID
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.StudentListResponse.STUD_FirstName">
+            <summary>
+            STUD_FirstName
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.StudentListResponse.STUD_LastName">
+            <summary>
+            STUD_LastName
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.StudentListResponse.STUD_Phone1">
+            <summary>
+            STUD_Phone1
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.StudentListResponse.Email1">
+            <summary>
+            Email1
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.StudentListResponse.STUD_LocationID">
+            <summary>
+            STUD_LocationID
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.StudentListResponse.STUD_ContactTypeID">
+            <summary>
+            STUD_ContactTypeID
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.StudentListResponse.STUD_ContactTypeCode">
+            <summary>
+            STUD_ContactTypeCode
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.StudentListResponse.STUD_StatusID">
+            <summary>
+            STUD_StatusID
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.StudentListResponse.STUD_StatusName">
+            <summary>
+            STUD_StatusName
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.ResponseModel.StudentListResponse.STUD_ContactMethodID">
+            <summary>
+            STUD_ContactMethodID
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.SpDbContext.POCSpContext">
+             <summary>
+             POCSpContext
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.SpDbContext.POCSpContext.#ctor">
+             <summary>
+             POCSpContext
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.SpDbContext.POCSpContext.Create(System.String)">
+             <summary>
+             Create
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.SpDbContext.POCSpContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{POCSampleModel.SpDbContext.POCSpContext})">
+             <summary>
+             POCSpContext
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.POCSpContext.ExecutreStoreProcedureResult">
+             <summary>
+             ExecutreStoreProcedureResult virtual
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.POCSpContext.ExecutreStoreProcedureResultWithSID">
+             <summary>
+             ExecutreStoreProcedureResultWithSID virtual
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.POCSpContext.ExecuteStoreProcedureResultWithId">
+             <summary>
+             ExecuteStoreProcedureResultWithId virtual
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.POCSpContext.ExecutreStoreProcedureResultList">
+             <summary>
+             ExecutreStoreProcedureResultList virtual
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.POCSpContext.ExecutreStoreProcedureResultWithEntitySID">
+             <summary>
+             ExecutreStoreProcedureResultWithEntitySID virtual
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.SpDbContext.POCSpContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+             <summary>
+             OnConfiguring
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.SpDbContext.POCSpContext.GetOptions(System.String)">
+             <summary>
+             GetOptions
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.SpDbContext.POCSpContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+             <summary>
+             OnModelCreating
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.SpDbContext.POCSpDbContext">
+            <summary>
+            POCSpDbContext
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.SpDbContext.POCSpDbContext.#ctor">
+             <summary>
+             POCSpDbContext
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.SpDbContext.POCSpDbContext.Create(System.String)">
+             <summary>
+             Create
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.SpDbContext.POCSpDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{POCSampleModel.SpDbContext.POCSpDbContext})">
+             <summary>
+             POCSpDbContext
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.POCSpDbContext.ExecutreStoreProcedureStudentList">
+            <summary>
+            ExecutreStoreProcedureStudentList
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.SpDbContext.POCSpDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+             <summary>
+             OnConfiguring
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.SpDbContext.POCSpDbContext.GetOptions(System.String)">
+             <summary>
+             GetOptions
+            </summary>
+        </member>
+        <member name="M:POCSampleModel.SpDbContext.POCSpDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+             <summary>
+             OnModelCreating
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResult">
+            <summary>
+            ExecutreStoreProcedureResult
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResult.ErrorMessage">
+            <summary>
+            The string that assign as ErrorMessage
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResult.Result">
+            <summary>
+            The string that assign as Result
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultWithEntitySID">
+            <summary>
+            ExecutreStoreProcedureResultWithEntitySID
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultWithEntitySID.ErrorMessage">
+            <summary>
+            The string that assign as ErrorMessage
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultWithEntitySID.Result">
+            <summary>
+            The string that assign as Result
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultWithEntitySID.EntitiySID">
+            <summary>
+            The string that assign as EntitiySID
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultWithSID">
+            <summary>
+            ExecutreStoreProcedureResultWithSID
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultWithSID.ErrorMessage">
+            <summary>
+            The string that assign as ErrorMessage
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultWithSID.SID">
+            <summary>
+            The string that assign as SID
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.SpDbContext.StoreProcedureResult.ExecuteStoreProcedureResultWithId">
+            <summary>
+            ExecuteStoreProcedureResultWithId
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.StoreProcedureResult.ExecuteStoreProcedureResultWithId.ErrorMessage">
+            <summary>
+            The string that assign as ErrorMessage
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.StoreProcedureResult.ExecuteStoreProcedureResultWithId.Id">
+            <summary>
+            The string that assign as Id
+            </summary>
+        </member>
+        <member name="T:POCSampleModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultList">
+            <summary>
+            ExecutreStoreProcedureResultList
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultList.ErrorMessage">
+            <summary>
+            The string that assign as ErrorMessage
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultList.Result">
+            <summary>
+            The string that assign as Result
+            </summary>
+        </member>
+        <member name="P:POCSampleModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultList.TotalCount">
+            <summary>
+            The string that assign as TotalCount
+            </summary>
+        </member>
+    </members>
+</doc>

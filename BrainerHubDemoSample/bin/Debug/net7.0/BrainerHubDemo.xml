@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BrainerHubDemo</name>
+    </assembly>
+    <members>
+        <member name="T:BrainerHubDemo.Controllers.BaseController">
+            <summary>
+            BaseController inherits ControllerBase
+            </summary>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.BaseController.FillParamesFromModel(BrainerHubDemoModel.CustomModels.SearchRequestModel,System.Int64)">
+            <summary>
+            fill params from model
+            </summary>
+            <param name="model">request params</param>
+            <returns>dictinoary object </returns>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.BaseController.GetFilterConditionFromModel(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.BaseController.ToEscapeXml(System.String)">
+            <summary>
+            ToEscapeXml
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.BaseController.GetFormData">
+            <summary>
+            GetFormData
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.BaseController.BindSearchResult``1(BrainerHubDemoModel.CustomModels.SearchPage{``0},BrainerHubDemoModel.CustomModels.SearchRequestModel,System.String)">
+            <summary>
+            BindSearchResult
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+            <param name="model"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.BaseController.BindSearchResult(BrainerHubDemoModel.CustomModels.Page,BrainerHubDemoModel.CustomModels.SearchRequestModel,System.String)">
+            <summary>
+            BindSearchResult page
+            </summary>
+            <param name="list"></param>
+            <param name="model"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BrainerHubDemo.Controllers.V1.JobsController">
+            <summary>
+            JobsController
+            </summary>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.V1.JobsController.#ctor(BrainerHubDemoService.BrainerHubDemoRepository.Interface.IJobsRepository,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializing Jobs Controller 
+            </summary>
+            <param name="jobsRepository">Jobs Repository</param>
+            <param name="config">Configuration</param>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.V1.JobsController.PutJobs(BrainerHubDemoModel.RequestModel.UpdateJobsRequestModel,System.Int32)">
+            <summary>
+            Update Jobs
+            </summary>           
+            <response code="200">OK: The request was successful and the response body contains the representation requested.</response>
+            <response code="400">BAD REQUEST: The data given in the POST or PUT failed validation. Inspect the response body for details.</response>
+            <response code="401">UNAUTHORIZED: The supplied credentials, if any, are not sufficient to access the resource.</response>
+            <response code="404">NOT FOUND</response>
+            <response code="500">SERVER ERROR: We couldn't return the representation due to an internal server error.</response>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.V1.JobsController.UpdateJobs(BrainerHubDemoModel.RequestModel.UpdateJobsRequestModel,System.Int32)">
+            <summary>
+            Update Jobs
+            </summary>           
+            <response code="200">OK: The request was successful and the response body contains the representation requested.</response>
+            <response code="400">BAD REQUEST: The data given in the POST or PUT failed validation. Inspect the response body for details.</response>
+            <response code="401">UNAUTHORIZED: The supplied credentials, if any, are not sufficient to access the resource.</response>
+            <response code="404">NOT FOUND</response>
+            <response code="500">SERVER ERROR: We couldn't return the representation due to an internal server error.</response>
+        </member>
+        <member name="T:BrainerHubDemo.Controllers.V1.StudentsController">
+            <summary>
+            Students Controller
+            </summary>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.V1.StudentsController.#ctor(BrainerHubDemoService.BrainerHubDemoRepository.Interface.IStudentRepository,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializing Students Controller 
+            </summary>
+            <param name="studentRepository">Student Repository</param>
+            <param name="config">Configuration</param>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.V1.StudentsController.PostStudent(BrainerHubDemoModel.RequestModel.StudentRequestModel)">
+            <summary>
+            Create Student
+            </summary>           
+            <response code="200">OK: The request was successful and the response body contains the representation requested.</response>
+            <response code="400">BAD REQUEST: The data given in the POST or PUT failed validation. Inspect the response body for details.</response>
+            <response code="401">UNAUTHORIZED: The supplied credentials, if any, are not sufficient to access the resource.</response>
+            <response code="404">NOT FOUND</response>
+            <response code="500">SERVER ERROR: We couldn't return the representation due to an internal server error.</response>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.V1.StudentsController.PutProduct(BrainerHubDemoModel.RequestModel.UpdateStudentRequestModel,System.Int32)">
+            <summary>
+            Update Student
+            </summary>           
+            <response code="200">OK: The request was successful and the response body contains the representation requested.</response>
+            <response code="400">BAD REQUEST: The data given in the POST or PUT failed validation. Inspect the response body for details.</response>
+            <response code="401">UNAUTHORIZED: The supplied credentials, if any, are not sufficient to access the resource.</response>
+            <response code="404">NOT FOUND</response>
+            <response code="500">SERVER ERROR: We couldn't return the representation due to an internal server error.</response>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.V1.StudentsController.Liststudent(BrainerHubDemoModel.RequestModel.StudentListRequestModel)">
+            <summary>
+            Get Students List
+            </summary>                
+            <response code="200">OK: The request was successful and the response body contains the representation requested.</response>
+            <response code="400">BAD REQUEST: The data given in the POST or PUT failed validation. Inspect the response body for details.</response>
+            <response code="401">UNAUTHORIZED: The supplied credentials, if any, are not sufficient to access the resource.</response>
+            <response code="404">NOT FOUND</response>
+            <response code="500">SERVER ERROR: We couldn't return the representation due to an internal server error.</response>
+        </member>
+        <member name="T:BrainerHubDemo.Controllers.V1.TaskController">
+            <summary>
+            TaskController
+            </summary>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.V1.TaskController.#ctor(BrainerHubDemoService.BrainerHubDemoRepository.Interface.ITaskRepository,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializing Tasks Controller 
+            </summary>
+            <param name="taskRepository">Tasks Repository</param>
+            <param name="config">Configuration</param>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.V1.TaskController.PutTasks(BrainerHubDemoModel.RequestModel.UpdateTaskRequestModel,System.Int32)">
+            <summary>
+            Update Tasks
+            </summary>           
+            <response code="200">OK: The request was successful and the response body contains the representation requested.</response>
+            <response code="400">BAD REQUEST: The data given in the POST or PUT failed validation. Inspect the response body for details.</response>
+            <response code="401">UNAUTHORIZED: The supplied credentials, if any, are not sufficient to access the resource.</response>
+            <response code="404">NOT FOUND</response>
+            <response code="500">SERVER ERROR: We couldn't return the representation due to an internal server error.</response>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.V1.TaskController.UpdateTasks(BrainerHubDemoModel.RequestModel.UpdateTaskRequestModel,System.Int32)">
+            <summary>
+            Update Tasks
+            </summary>           
+            <response code="200">OK: The request was successful and the response body contains the representation requested.</response>
+            <response code="400">BAD REQUEST: The data given in the POST or PUT failed validation. Inspect the response body for details.</response>
+            <response code="401">UNAUTHORIZED: The supplied credentials, if any, are not sufficient to access the resource.</response>
+            <response code="404">NOT FOUND</response>
+            <response code="500">SERVER ERROR: We couldn't return the representation due to an internal server error.</response>
+        </member>
+        <member name="T:BrainerHubDemo.FluentInterceptor">
+            <summary>
+            FluentInterceptor
+            </summary>
+        </member>
+        <member name="M:BrainerHubDemo.FluentInterceptor.#ctor">
+            <summary>
+            FluentInterceptor Constructor
+            </summary>
+        </member>
+        <member name="M:BrainerHubDemo.FluentInterceptor.FluentValidation#AspNetCore#IValidatorInterceptor#AfterAspNetValidation(Microsoft.AspNetCore.Mvc.ActionContext,FluentValidation.IValidationContext,FluentValidation.Results.ValidationResult)">
+            <summary>
+            AfterAspNetValidation
+            </summary>
+            <param name="actionContext"></param>
+            <param name="validationContext"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrainerHubDemo.FluentInterceptor.FluentValidation#AspNetCore#IValidatorInterceptor#BeforeAspNetValidation(Microsoft.AspNetCore.Mvc.ActionContext,FluentValidation.IValidationContext)">
+            <summary>
+            BeforeMvcValidation
+            </summary>
+            <param name="actionContext"></param>
+            <param name="commonContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BrainerHubDemo.Helper.HttpStatusCodeExceptionMiddleware">
+            <summary>
+            HttpStatusCodeExceptionMiddleware
+            </summary>
+        </member>
+        <member name="M:BrainerHubDemo.Helper.HttpStatusCodeExceptionMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            HttpStatusCodeExceptionMiddleware Constructor
+            </summary>
+            <param name="next"></param>
+            <param name="loggerFactory"></param>
+        </member>
+        <member name="M:BrainerHubDemo.Helper.HttpStatusCodeExceptionMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Invoke
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BrainerHubDemo.Helper.HttpStatusCodeExceptionMiddlewareExtensions">
+            <summary>
+            HttpStatusCodeExceptionMiddlewareExtensions
+            </summary>
+        </member>
+        <member name="M:BrainerHubDemo.Helper.HttpStatusCodeExceptionMiddlewareExtensions.UseHttpStatusCodeExceptionMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            UseHttpStatusCodeExceptionMiddleware
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BrainerHubDemo.Helper.HttpStatusCodeExtensions">
+            <summary>
+            HttpStatusCodeExtensions
+            </summary>
+        </member>
+        <member name="M:BrainerHubDemo.Helper.HttpStatusCodeExtensions.ThrowException(System.Net.HttpStatusCode,System.String,System.String)">
+            <summary>
+            ThrowException
+            </summary>
+            <param name="code"></param>
+            <param name="msgKey"></param>
+            <param name="defaultMsg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrainerHubDemo.Helper.HttpStatusCodeExtensions.ThrowValidationMessage(System.String)">
+            <summary>
+            ThrowValidationMessage
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrainerHubDemo.Helper.HttpStatusCodeExtensions.ErrorResponse(System.Net.HttpStatusCode,System.String)">
+            <summary>
+            ErrorResponse
+            </summary>
+            <param name="code"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrainerHubDemo.Helper.HttpStatusCodeExtensions.ErrorResponse(System.Net.HttpStatusCode,System.Exception)">
+            <summary>
+            ErrorResponse
+            </summary>
+            <param name="code"></param>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrainerHubDemo.Helper.HttpStatusCodeExtensions.AddOrReplaceQueryParameter(Microsoft.AspNetCore.Http.HttpContext,System.String[])">
+            <summary>
+            AddOrReplaceQueryParameter
+            </summary>
+            <param name="c"></param>
+            <param name="nameValues"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrainerHubDemo.Helper.HttpStatusCodeExtensions.AddOrReplaceQueryParameters(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.Dictionary{System.String,Microsoft.Extensions.Primitives.StringValues})">
+            <summary>
+            AddOrReplaceQueryParameters
+            </summary>
+            <param name="c"></param>
+            <param name="pvs"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BrainerHubDemo.Program">
+            <summary>
+            Program
+            </summary>
+        </member>
+        <member name="M:BrainerHubDemo.Program.Main(System.String[])">
+            <summary>
+            Main
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="T:BrainerHubDemo.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemo.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemo.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
