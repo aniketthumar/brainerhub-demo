@@ -1,19 +1,20 @@
 
 using Microsoft.EntityFrameworkCore;
 using BrainerHubDemo.Helper;
-using BrainerHubDemoModel.POcSampleDB;
-using BrainerHubDemoModel.SpDbContext;
 using BrainerHubDemoService.BrainerHubDemoRepository.Implementation;
 using BrainerHubDemoService.BrainerHubDemoRepository.Interface;
-using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json;
-using Swashbuckle.AspNetCore.Swagger;
-using Microsoft.Extensions.PlatformAbstractions;
 using FluentValidation.AspNetCore;
 using BrainerHubDemoModel.RequestModel;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
-using System.Reflection;
 using MicroElements.Swashbuckle.FluentValidation;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using static BrainerHubDemoModel.CustomModels.Constant;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using BrainerHubDemoModel.Helper;
 
 namespace BrainerHubDemo
 {
@@ -42,29 +43,7 @@ namespace BrainerHubDemo
             string? connectionstring = _configuration.GetConnectionString("DefaultConnection");
 
 
-            builder.Services.AddDbContext<POCSampleContext>((serviceProvider, options) =>
-            {
-
-                options.UseSqlServer(connectionstring,
-                                               sqlServerOptionsAction: sqlOptions =>
-                                               {
-                                                   sqlOptions.EnableRetryOnFailure();
-                                               });
-                options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-                options.EnableSensitiveDataLogging(true);
-            });
-            builder.Services.AddDbContext<POCSpContext>((serviceProvider, options) =>
-            {
-
-                options.UseSqlServer(connectionstring,
-                                               sqlServerOptionsAction: sqlOptions =>
-                                               {
-                                                   sqlOptions.EnableRetryOnFailure();
-                                               });
-                options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-                options.EnableSensitiveDataLogging(true);
-            });
-            builder.Services.AddDbContext<POCSpDbContext>((serviceProvider, options) =>
+            builder.Services.AddDbContext<BrainerHubDemoModel.DbEntities.BrainerHubContex>((serviceProvider, options) =>
             {
 
                 options.UseSqlServer(connectionstring,
@@ -78,40 +57,108 @@ namespace BrainerHubDemo
             #endregion
 
             #region DependencyInjection
-            builder.Services.AddScoped<IStudentRepository, StudentRepository>();
-            builder.Services.AddScoped<IJobsRepository, JobsRepository>();
-            builder.Services.AddScoped<ITaskRepository, TaskRepository>();
+            builder.Services.AddScoped<IProductRepository, ProductRepository>();
+            builder.Services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
             #endregion
 
             #region Add FluentValidation
+#pragma warning disable CS0618 // Type or member is obsolete
             builder.Services
         .AddMvc()
         // Adds fluent validators to Asp.net
         .AddFluentValidation(c =>
         {
-            c.RegisterValidatorsFromAssemblyContaining<StudentRequestModel>();
+            c.RegisterValidatorsFromAssemblyContaining<UserRegisterationRequestModel>();
             // Optionally set validator factory if you have problems with scope resolve inside validators.
             c.ValidatorFactoryType = typeof(HttpContextServiceProviderValidatorFactory);
         });
+#pragma warning restore CS0618 // Type or member is obsolete
 
             builder.Services.AddTransient<IValidatorInterceptor, FluentInterceptor>();
+
+            builder.Services.AddAuthentication(sharedOptions =>
+            {
+                sharedOptions.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                sharedOptions.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                sharedOptions.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(jwtOptions =>
+            {
+                jwtOptions.RequireHttpsMetadata = false;
+                jwtOptions.SaveToken = true;
+                jwtOptions.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = JWTTokenCredentials.ValidIssuer,
+                    ValidAudience = JWTTokenCredentials.ValidAudience,
+                    IssuerSigningKey = JWTTokenCredentials.GetSecurityKey() // new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(JWTTokenCredentials.IssuerSigningKeyBytes))
+                };
+                jwtOptions.Events = new JwtBearerEvents
+                {
+                    OnMessageReceived = context =>
+                    {
+                        var accessToken = context.Request.Query["access_token"];
+                        if (!string.IsNullOrWhiteSpace(accessToken))
+                        {
+                            context.Token = accessToken;
+                        }
+                        return Task.CompletedTask;
+                    },
+                    OnTokenValidated = context =>
+                    {
+                        var jwtToken = context.SecurityToken as JwtSecurityToken;
+                        context.Request.Headers[ClaimTypes.Email] = jwtToken.Claims.Where(x => x.Type == ClaimTypes.Email).FirstOrDefault().Value;
+       
+                        var GivenName = jwtToken.Claims.Where(x => x.Type == ClaimTypes.GivenName).FirstOrDefault()?.Value;
+                        if (string.IsNullOrWhiteSpace(GivenName))
+                        {
+                         
+                            context.Request.Headers[JWTClaimParameters.UserId] = jwtToken.Claims.Where(x => x.Type == JWTClaimParameters.UserId).FirstOrDefault().Value;
+                        }
+                        return Task.CompletedTask;
+                    },
+                    OnChallenge = context =>
+                    {
+                        context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+
+                        var result = new ErrorResult
+                        {
+                            Code = 401,
+                            Status = StatusCodes.Status401Unauthorized,
+                            Message = "Unauthorized"
+                        };
+                        JsonSerializerSettings settings = new JsonSerializerSettings
+                        {
+                            ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                            NullValueHandling = NullValueHandling.Ignore
+                        };
+                        var content = JsonConvert.SerializeObject(result, settings);
+                        context.Response.ContentType = "application/json";
+                        context.Response.WriteAsync(content);
+                        context.HandleResponse();
+
+                        return Task.CompletedTask;
+                    },
+                    OnAuthenticationFailed = context =>
+                    {
+                        return Task.CompletedTask;
+                    }
+                };
+            });
+
+            builder.Services.AddAuthorization();
+
+
             builder.Services.AddFluentValidationRulesToSwagger();
+
+            builder.Services.AddSwaggerGen();
 
             #endregion
 
             #region Add Swagger
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen(c =>
-            {
-                var basePath = PlatformServices.Default.Application.ApplicationBasePath;
-                var xmlPath = Path.Combine(basePath, "POCSample.xml");
-                c.IncludeXmlComments(xmlPath);
 
-                xmlPath = Path.Combine(basePath, "POCSampleModel.xml");
-                c.IncludeXmlComments(xmlPath);
-
-            });
             builder.Services.AddSwaggerGenNewtonsoftSupport();
             #endregion
 
@@ -121,18 +168,12 @@ namespace BrainerHubDemo
             var app = builder.Build();
 
             app.UseHttpStatusCodeExceptionMiddleware();
-
-            // Configure the HTTP request pipeline.
-            //if (app.Environment.IsDevelopment())
-            //{
             app.UseSwagger();
             app.UseSwaggerUI();
-            //}
 
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

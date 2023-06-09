@@ -4,115 +4,19 @@
         <name>BrainerHubDemoModel</name>
     </assembly>
     <members>
-        <member name="T:BrainerHubDemoModel.CustomModels.ISearchResult`1">
+        <member name="T:BrainerHubDemoModel.CustomModels.Constant">
             <summary>
-            SearchResult
+            
             </summary>
         </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.ISearchResult`1.Meta">
+        <member name="T:BrainerHubDemoModel.CustomModels.Constant.JWTTokenCredentials">
             <summary>
-            The string that assign as Meta
+            
             </summary>
         </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.ISearchResult`1.Results">
+        <member name="T:BrainerHubDemoModel.CustomModels.Constant.JWTClaimParameters">
             <summary>
-            The string that assign as Results
-            </summary>
-        </member>
-        <member name="T:BrainerHubDemoModel.CustomModels.Page">
-            <summary>
-            Page
-            </summary>
-        </member>
-        <member name="M:BrainerHubDemoModel.CustomModels.Page.#ctor">
-            <summary>
-            Initialization Page
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.Page.Meta">
-            <summary>
-            Initialization Meta
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.Page.Result">
-            <summary>
-            Initialization Result
-            </summary>
-        </member>
-        <member name="T:BrainerHubDemoModel.CustomModels.SearchPage`1">
-            <summary>
-            SearchPage
-            </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="M:BrainerHubDemoModel.CustomModels.SearchPage`1.#ctor">
-            <summary>
-            Initialization SearchPage
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.SearchPage`1.Meta">
-            <summary>
-            Initialization Meta
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.SearchPage`1.List">
-            <summary>
-            Initialization List
-            </summary>
-        </member>
-        <member name="T:BrainerHubDemoModel.CustomModels.Meta">
-            <summary>
-            Meta
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.Meta.Page">
-            <summary>
-            The current page number. the first page is 1.
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.Meta.PageSize">
-            <summary>
-            Page size of the result set.
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.Meta.Key">
-            <summary>
-            Resource key name.
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.Meta.Url">
-            <summary>
-            The URL of the current page.
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.Meta.FirstPageUrl">
-            <summary>
-            The URL for the first page of this list.
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.Meta.PreviousPageUrl">
-            <summary>
-            The URL for the previous page of this list.
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.Meta.NextPageUrl">
-            <summary>
-            The URL for the next page of this list.
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.Meta.TotalResults">
-            <summary>
-            Total Count of results.
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.Meta.TotalPages">
-            <summary>
-            Total No of pages of the result set.
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.Meta.NextPageExists">
-            <summary>
-            Total No of pages of the NextPageExists.
+            
             </summary>
         </member>
         <member name="T:BrainerHubDemoModel.CustomModels.SearchRequestModel">
@@ -138,86 +42,6 @@
         <member name="P:BrainerHubDemoModel.CustomModels.SearchRequestModel.PageSize">
             <summary>
             Page size of the result set.
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.SearchRequestModel.SortColumn">
-            <summary>
-            The column / attribute by which the results shall be sorted.
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.SearchRequestModel.SortOrder">
-            <summary>
-            The order by which the results shall be sorted.  Possible values are 'asc' for ascending order, 'desc' for descending order.
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.SearchRequestModel.Filters">
-            <summary>
-            Search filter list to look up for matching results. If must be in format '[{key:'keyname',value:'keyvalue'},{key:'keyname',value:'keyvalue'}]'.
-            </summary>
-        </member>
-        <member name="T:BrainerHubDemoModel.CustomModels.FilterRequestModel">
-            <summary>
-            FilterRequestModel
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.FilterRequestModel.Key">
-            <summary>
-            The string that assign as Key
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.FilterRequestModel.Condition">
-            <summary>
-            The string that assign as Condition
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.FilterRequestModel.Value">
-            <summary>
-            The string that assign as Value
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.FilterRequestModel.From">
-            <summary>
-            The string that assign as From
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.FilterRequestModel.To">
-            <summary>
-            The string that assign as To
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.FilterRequestModel.Type">
-            <summary>
-            The string that assign as Type
-            </summary>
-        </member>
-        <member name="T:BrainerHubDemoModel.CustomModels.SearchResult`1">
-            <summary>
-            SearchResult
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.SearchResult`1.Results">
-            <summary>
-            Search string to look up for matching results. 
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.SearchResult`1.Meta">
-            <summary>
-            Initialization Meta
-            </summary>
-        </member>
-        <member name="T:BrainerHubDemoModel.CustomModels.SpResultModel">
-            <summary>
-            SpResultModel
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.SpResultModel.Id">
-            <summary>
-            The string that assign as Id
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.CustomModels.SpResultModel.Result">
-            <summary>
-            The string that assign as Result
             </summary>
         </member>
         <member name="T:BrainerHubDemoModel.Helper.CommonHelper">
@@ -526,9 +350,60 @@
             <param name="errorObject"></param>
             <param name="Code"></param>
         </member>
-        <member name="T:BrainerHubDemoModel.POcSampleDB.ContContact">
+        <member name="T:BrainerHubDemoModel.RequestModel.LoginRequestModelValidator">
             <summary>
-            CONT_Contact_Student
+            
+            </summary>
+        </member>
+        <member name="M:BrainerHubDemoModel.RequestModel.LoginRequestModelValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BrainerHubDemoModel.RequestModel.LoginRequestModel">
+            <summary>
+            LoginRequestModel
+            </summary>
+            
+        </member>
+        <member name="P:BrainerHubDemoModel.RequestModel.LoginRequestModel.EmailAddress">
+            <summary>
+            The value that assign as Email Address
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemoModel.RequestModel.LoginRequestModel.Password">
+            <summary>
+            The value that assign as password
+            </summary>
+        </member>
+        <member name="T:BrainerHubDemoModel.RequestModel.ProductRequestModel">
+            <summary>
+            ProductRequestModel
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemoModel.RequestModel.ProductRequestModel.name">
+            <summary>
+            The value that assign as Name
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemoModel.RequestModel.ProductRequestModel.description">
+            <summary>
+            The value that assign as Description
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemoModel.RequestModel.ProductRequestModel.price">
+            <summary>
+            The value that assign as Price
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemoModel.RequestModel.ProductRequestModel.quantity">
+            <summary>
+            The value that assign as Quantity
+            </summary>
+        </member>
+        <member name="T:BrainerHubDemoModel.RequestModel.ProductUpdateRequestModel">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:BrainerHubDemoModel.RequestModel.StudentListRequestModel">
@@ -786,6 +661,41 @@
             Intializing UpdateTaskRequestModelValidator
             </summary>
         </member>
+        <member name="T:BrainerHubDemoModel.RequestModel.UserRegisterationRequestModel">
+            <summary>
+            UserRegisterationRequestModel
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemoModel.RequestModel.UserRegisterationRequestModel.Email">
+            <summary>
+            The value that assign as Email Address
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemoModel.RequestModel.UserRegisterationRequestModel.FirstName">
+            <summary>
+            The value that assign as First Name
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemoModel.RequestModel.UserRegisterationRequestModel.LastName">
+            <summary>
+            The value that assign as First Name
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemoModel.RequestModel.UserRegisterationRequestModel.Password">
+            <summary>
+            The value that assign as password
+            </summary>
+        </member>
+        <member name="T:BrainerHubDemoModel.RequestModel.UserRegisterationRequestModelValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BrainerHubDemoModel.RequestModel.UserRegisterationRequestModelValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:BrainerHubDemoModel.ResponseModel.FluentErrorResponse">
             <summary>
             FluentErrorResponse
@@ -814,6 +724,36 @@
         <member name="P:BrainerHubDemoModel.ResponseModel.FluentErrorResponse.Errors">
             <summary>
             Errors
+            </summary>
+        </member>
+        <member name="T:BrainerHubDemoModel.ResponseModel.LoginResponseModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemoModel.ResponseModel.LoginResponseModel.EmailAddress">
+            <summary>
+            The value that assign as Email Address
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemoModel.ResponseModel.LoginResponseModel.FirstName">
+            <summary>
+            The value that assign as First Name
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemoModel.ResponseModel.LoginResponseModel.LastName">
+            <summary>
+            The value that assign as Last Name
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemoModel.ResponseModel.LoginResponseModel.AccessToken">
+            <summary>
+            The string that assign as AccessToken
+            </summary>
+        </member>
+        <member name="P:BrainerHubDemoModel.ResponseModel.LoginResponseModel.Expires_in">
+            <summary>
+            The string that assign as Expires in
             </summary>
         </member>
         <member name="T:BrainerHubDemoModel.ResponseModel.StudentListResponse">
@@ -881,189 +821,74 @@
             STUD_ContactMethodID
             </summary>
         </member>
-        <member name="T:BrainerHubDemoModel.SpDbContext.POCSpContext">
-             <summary>
-             POCSpContext
-            </summary>
-        </member>
-        <member name="M:BrainerHubDemoModel.SpDbContext.POCSpContext.#ctor">
-             <summary>
-             POCSpContext
-            </summary>
-        </member>
-        <member name="M:BrainerHubDemoModel.SpDbContext.POCSpContext.Create(System.String)">
-             <summary>
-             Create
-            </summary>
-        </member>
-        <member name="M:BrainerHubDemoModel.SpDbContext.POCSpContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{BrainerHubDemoModel.SpDbContext.POCSpContext})">
-             <summary>
-             POCSpContext
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.POCSpContext.ExecutreStoreProcedureResult">
-             <summary>
-             ExecutreStoreProcedureResult virtual
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.POCSpContext.ExecutreStoreProcedureResultWithSID">
-             <summary>
-             ExecutreStoreProcedureResultWithSID virtual
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.POCSpContext.ExecuteStoreProcedureResultWithId">
-             <summary>
-             ExecuteStoreProcedureResultWithId virtual
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.POCSpContext.ExecutreStoreProcedureResultList">
-             <summary>
-             ExecutreStoreProcedureResultList virtual
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.POCSpContext.ExecutreStoreProcedureResultWithEntitySID">
-             <summary>
-             ExecutreStoreProcedureResultWithEntitySID virtual
-            </summary>
-        </member>
-        <member name="M:BrainerHubDemoModel.SpDbContext.POCSpContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
-             <summary>
-             OnConfiguring
-            </summary>
-        </member>
-        <member name="M:BrainerHubDemoModel.SpDbContext.POCSpContext.GetOptions(System.String)">
-             <summary>
-             GetOptions
-            </summary>
-        </member>
-        <member name="M:BrainerHubDemoModel.SpDbContext.POCSpContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
-             <summary>
-             OnModelCreating
-            </summary>
-        </member>
-        <member name="T:BrainerHubDemoModel.SpDbContext.POCSpDbContext">
+        <member name="T:Connectedcow.Model.RequestModel.MediaFile">
             <summary>
-            POCSpDbContext
+            
             </summary>
         </member>
-        <member name="M:BrainerHubDemoModel.SpDbContext.POCSpDbContext.#ctor">
-             <summary>
-             POCSpDbContext
-            </summary>
-        </member>
-        <member name="M:BrainerHubDemoModel.SpDbContext.POCSpDbContext.Create(System.String)">
-             <summary>
-             Create
-            </summary>
-        </member>
-        <member name="M:BrainerHubDemoModel.SpDbContext.POCSpDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{BrainerHubDemoModel.SpDbContext.POCSpDbContext})">
-             <summary>
-             POCSpDbContext
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.POCSpDbContext.ExecutreStoreProcedureStudentList">
+        <member name="P:Connectedcow.Model.RequestModel.MediaFile.file">
             <summary>
-            ExecutreStoreProcedureStudentList
+            The physical file that you upload.
             </summary>
         </member>
-        <member name="M:BrainerHubDemoModel.SpDbContext.POCSpDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
-             <summary>
-             OnConfiguring
-            </summary>
-        </member>
-        <member name="M:BrainerHubDemoModel.SpDbContext.POCSpDbContext.GetOptions(System.String)">
-             <summary>
-             GetOptions
-            </summary>
-        </member>
-        <member name="M:BrainerHubDemoModel.SpDbContext.POCSpDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
-             <summary>
-             OnModelCreating
-            </summary>
-        </member>
-        <member name="T:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResult">
+        <member name="P:Connectedcow.Model.RequestModel.MediaFile.filename">
             <summary>
-            ExecutreStoreProcedureResult
+            
             </summary>
         </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResult.ErrorMessage">
+        <member name="P:Connectedcow.Model.RequestModel.MediaFile.fileType">
             <summary>
-            The string that assign as ErrorMessage
+            
             </summary>
         </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResult.Result">
+        <member name="P:Connectedcow.Model.RequestModel.MediaFile.fileSize">
             <summary>
-            The string that assign as Result
+            
             </summary>
         </member>
-        <member name="T:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultWithEntitySID">
+        <member name="P:Connectedcow.Model.RequestModel.MediaFile.fileWidth">
             <summary>
-            ExecutreStoreProcedureResultWithEntitySID
+            
             </summary>
         </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultWithEntitySID.ErrorMessage">
+        <member name="P:Connectedcow.Model.RequestModel.MediaFile.fileHeight">
             <summary>
-            The string that assign as ErrorMessage
+            
             </summary>
         </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultWithEntitySID.Result">
+        <member name="P:Connectedcow.Model.RequestModel.MediaFile.thumbfile">
             <summary>
-            The string that assign as Result
+            The physical file that you upload.
             </summary>
         </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultWithEntitySID.EntitiySID">
+        <member name="T:Connectedcow.Model.ResponseModel.ProductResponseModel">
             <summary>
-            The string that assign as EntitiySID
+            ProductResponseModel
             </summary>
         </member>
-        <member name="T:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultWithSID">
+        <member name="P:Connectedcow.Model.ResponseModel.ProductResponseModel.ProductId">
             <summary>
-            ExecutreStoreProcedureResultWithSID
+            
             </summary>
         </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultWithSID.ErrorMessage">
+        <member name="P:Connectedcow.Model.ResponseModel.ProductResponseModel.Name">
             <summary>
-            The string that assign as ErrorMessage
+            
             </summary>
         </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultWithSID.SID">
+        <member name="P:Connectedcow.Model.ResponseModel.ProductResponseModel.Description">
             <summary>
-            The string that assign as SID
+            
             </summary>
         </member>
-        <member name="T:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecuteStoreProcedureResultWithId">
+        <member name="P:Connectedcow.Model.ResponseModel.ProductResponseModel.price">
             <summary>
-            ExecuteStoreProcedureResultWithId
+            The value that assign as Price
             </summary>
         </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecuteStoreProcedureResultWithId.ErrorMessage">
+        <member name="P:Connectedcow.Model.ResponseModel.ProductResponseModel.quantity">
             <summary>
-            The string that assign as ErrorMessage
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecuteStoreProcedureResultWithId.Id">
-            <summary>
-            The string that assign as Id
-            </summary>
-        </member>
-        <member name="T:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultList">
-            <summary>
-            ExecutreStoreProcedureResultList
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultList.ErrorMessage">
-            <summary>
-            The string that assign as ErrorMessage
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultList.Result">
-            <summary>
-            The string that assign as Result
-            </summary>
-        </member>
-        <member name="P:BrainerHubDemoModel.SpDbContext.StoreProcedureResult.ExecutreStoreProcedureResultList.TotalCount">
-            <summary>
-            The string that assign as TotalCount
+            The value that assign as Quantity
             </summary>
         </member>
     </members>

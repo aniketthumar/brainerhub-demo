@@ -9,20 +9,6 @@
             BaseController inherits ControllerBase
             </summary>
         </member>
-        <member name="M:BrainerHubDemo.Controllers.BaseController.FillParamesFromModel(BrainerHubDemoModel.CustomModels.SearchRequestModel,System.Int64)">
-            <summary>
-            fill params from model
-            </summary>
-            <param name="model">request params</param>
-            <returns>dictinoary object </returns>
-        </member>
-        <member name="M:BrainerHubDemo.Controllers.BaseController.GetFilterConditionFromModel(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="filter"></param>
-            <returns></returns>
-        </member>
         <member name="M:BrainerHubDemo.Controllers.BaseController.ToEscapeXml(System.String)">
             <summary>
             ToEscapeXml
@@ -36,92 +22,49 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:BrainerHubDemo.Controllers.BaseController.BindSearchResult``1(BrainerHubDemoModel.CustomModels.SearchPage{``0},BrainerHubDemoModel.CustomModels.SearchRequestModel,System.String)">
+        <member name="T:BrainerHubDemo.Controllers.V1.AuthenticationController">
             <summary>
-            BindSearchResult
+            AuthenticationController
             </summary>
-            <typeparam name="T"></typeparam>
-            <param name="list"></param>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.V1.AuthenticationController.#ctor(BrainerHubDemoService.BrainerHubDemoRepository.Interface.IAuthenticationRepository)">
+            <summary>
+            Initializing AuthenticationController
+            </summary>
+            <param name="authenticationRepository">Authentication Repository</param>
+        </member>
+        <member name="M:BrainerHubDemo.Controllers.V1.AuthenticationController.RegisterFarmUser(BrainerHubDemoModel.RequestModel.UserRegisterationRequestModel)">
+            <summary>
+            Register User 
+            </summary>   
             <param name="model"></param>
-            <param name="key"></param>
-            <returns></returns>
-        </member>
-        <member name="M:BrainerHubDemo.Controllers.BaseController.BindSearchResult(BrainerHubDemoModel.CustomModels.Page,BrainerHubDemoModel.CustomModels.SearchRequestModel,System.String)">
-            <summary>
-            BindSearchResult page
-            </summary>
-            <param name="list"></param>
-            <param name="model"></param>
-            <param name="key"></param>
-            <returns></returns>
-        </member>
-        <member name="T:BrainerHubDemo.Controllers.V1.JobsController">
-            <summary>
-            JobsController
-            </summary>
-        </member>
-        <member name="M:BrainerHubDemo.Controllers.V1.JobsController.#ctor(BrainerHubDemoService.BrainerHubDemoRepository.Interface.IJobsRepository,Microsoft.Extensions.Configuration.IConfiguration)">
-            <summary>
-            Initializing Jobs Controller 
-            </summary>
-            <param name="jobsRepository">Jobs Repository</param>
-            <param name="config">Configuration</param>
-        </member>
-        <member name="M:BrainerHubDemo.Controllers.V1.JobsController.PutJobs(BrainerHubDemoModel.RequestModel.UpdateJobsRequestModel,System.Int32)">
-            <summary>
-            Update Jobs
-            </summary>           
             <response code="200">OK: The request was successful and the response body contains the representation requested.</response>
             <response code="400">BAD REQUEST: The data given in the POST or PUT failed validation. Inspect the response body for details.</response>
             <response code="401">UNAUTHORIZED: The supplied credentials, if any, are not sufficient to access the resource.</response>
             <response code="404">NOT FOUND</response>
             <response code="500">SERVER ERROR: We couldn't return the representation due to an internal server error.</response>
         </member>
-        <member name="M:BrainerHubDemo.Controllers.V1.JobsController.UpdateJobs(BrainerHubDemoModel.RequestModel.UpdateJobsRequestModel,System.Int32)">
+        <member name="M:BrainerHubDemo.Controllers.V1.AuthenticationController.Auth(BrainerHubDemoModel.RequestModel.LoginRequestModel)">
             <summary>
-            Update Jobs
-            </summary>           
-            <response code="200">OK: The request was successful and the response body contains the representation requested.</response>
-            <response code="400">BAD REQUEST: The data given in the POST or PUT failed validation. Inspect the response body for details.</response>
-            <response code="401">UNAUTHORIZED: The supplied credentials, if any, are not sufficient to access the resource.</response>
-            <response code="404">NOT FOUND</response>
-            <response code="500">SERVER ERROR: We couldn't return the representation due to an internal server error.</response>
+            Login
+            </summary>
+            <param name="loginRequestModel"></param>
+            <returns></returns>
         </member>
-        <member name="T:BrainerHubDemo.Controllers.V1.StudentsController">
+        <member name="T:BrainerHubDemo.Controllers.V1.ProductController">
             <summary>
-            Students Controller
+            Products Controller
             </summary>
         </member>
-        <member name="M:BrainerHubDemo.Controllers.V1.StudentsController.#ctor(BrainerHubDemoService.BrainerHubDemoRepository.Interface.IStudentRepository,Microsoft.Extensions.Configuration.IConfiguration)">
+        <member name="M:BrainerHubDemo.Controllers.V1.ProductController.#ctor(BrainerHubDemoService.BrainerHubDemoRepository.Interface.IProductRepository,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
             <summary>
             Initializing Students Controller 
             </summary>
-            <param name="studentRepository">Student Repository</param>
-            <param name="config">Configuration</param>
+            <param name="productRepository">Product Repository</param>
         </member>
-        <member name="M:BrainerHubDemo.Controllers.V1.StudentsController.PostStudent(BrainerHubDemoModel.RequestModel.StudentRequestModel)">
+        <member name="M:BrainerHubDemo.Controllers.V1.ProductController.Liststudent(BrainerHubDemoModel.CustomModels.SearchRequestModel)">
             <summary>
-            Create Student
-            </summary>           
-            <response code="200">OK: The request was successful and the response body contains the representation requested.</response>
-            <response code="400">BAD REQUEST: The data given in the POST or PUT failed validation. Inspect the response body for details.</response>
-            <response code="401">UNAUTHORIZED: The supplied credentials, if any, are not sufficient to access the resource.</response>
-            <response code="404">NOT FOUND</response>
-            <response code="500">SERVER ERROR: We couldn't return the representation due to an internal server error.</response>
-        </member>
-        <member name="M:BrainerHubDemo.Controllers.V1.StudentsController.PutProduct(BrainerHubDemoModel.RequestModel.UpdateStudentRequestModel,System.Int32)">
-            <summary>
-            Update Student
-            </summary>           
-            <response code="200">OK: The request was successful and the response body contains the representation requested.</response>
-            <response code="400">BAD REQUEST: The data given in the POST or PUT failed validation. Inspect the response body for details.</response>
-            <response code="401">UNAUTHORIZED: The supplied credentials, if any, are not sufficient to access the resource.</response>
-            <response code="404">NOT FOUND</response>
-            <response code="500">SERVER ERROR: We couldn't return the representation due to an internal server error.</response>
-        </member>
-        <member name="M:BrainerHubDemo.Controllers.V1.StudentsController.Liststudent(BrainerHubDemoModel.RequestModel.StudentListRequestModel)">
-            <summary>
-            Get Students List
+            Get Product List
             </summary>                
             <response code="200">OK: The request was successful and the response body contains the representation requested.</response>
             <response code="400">BAD REQUEST: The data given in the POST or PUT failed validation. Inspect the response body for details.</response>
@@ -129,21 +72,9 @@
             <response code="404">NOT FOUND</response>
             <response code="500">SERVER ERROR: We couldn't return the representation due to an internal server error.</response>
         </member>
-        <member name="T:BrainerHubDemo.Controllers.V1.TaskController">
+        <member name="M:BrainerHubDemo.Controllers.V1.ProductController.PostProduct(BrainerHubDemoModel.RequestModel.ProductRequestModel)">
             <summary>
-            TaskController
-            </summary>
-        </member>
-        <member name="M:BrainerHubDemo.Controllers.V1.TaskController.#ctor(BrainerHubDemoService.BrainerHubDemoRepository.Interface.ITaskRepository,Microsoft.Extensions.Configuration.IConfiguration)">
-            <summary>
-            Initializing Tasks Controller 
-            </summary>
-            <param name="taskRepository">Tasks Repository</param>
-            <param name="config">Configuration</param>
-        </member>
-        <member name="M:BrainerHubDemo.Controllers.V1.TaskController.PutTasks(BrainerHubDemoModel.RequestModel.UpdateTaskRequestModel,System.Int32)">
-            <summary>
-            Update Tasks
+            Create Product
             </summary>           
             <response code="200">OK: The request was successful and the response body contains the representation requested.</response>
             <response code="400">BAD REQUEST: The data given in the POST or PUT failed validation. Inspect the response body for details.</response>
@@ -151,9 +82,9 @@
             <response code="404">NOT FOUND</response>
             <response code="500">SERVER ERROR: We couldn't return the representation due to an internal server error.</response>
         </member>
-        <member name="M:BrainerHubDemo.Controllers.V1.TaskController.UpdateTasks(BrainerHubDemoModel.RequestModel.UpdateTaskRequestModel,System.Int32)">
+        <member name="M:BrainerHubDemo.Controllers.V1.ProductController.UpdateProduct(BrainerHubDemoModel.RequestModel.ProductUpdateRequestModel,System.Int32)">
             <summary>
-            Update Tasks
+            Update Product
             </summary>           
             <response code="200">OK: The request was successful and the response body contains the representation requested.</response>
             <response code="400">BAD REQUEST: The data given in the POST or PUT failed validation. Inspect the response body for details.</response>

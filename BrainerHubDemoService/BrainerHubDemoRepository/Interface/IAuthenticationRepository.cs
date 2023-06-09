@@ -1,4 +1,5 @@
 ﻿using BrainerHubDemoModel.RequestModel;
+using BrainerHubDemoModel.ResponseModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace BrainerHubDemoService.BrainerHubDemoRepository.Interface
 {
-    public interface IJobsRepository
+    public interface IAuthenticationRepository
     {
-        Task UpdateJob(UpdateJobsRequestModel updateJobsRequestModel,int job_id);
+        Task RegisterUser(UserRegisterationRequestModel model);
 
+        Task<LoginResponseModel> Login(LoginRequestModel loginRequestModel);
     }
 }

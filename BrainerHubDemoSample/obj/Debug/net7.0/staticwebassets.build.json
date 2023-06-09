@@ -1,11 +1,105 @@
 {
   "Version": 1,
-  "Hash": "FYtRj/u38Cv3Y6Snwz7yRg9+E/iZo41IE+OGiTPM/LQ=",
+  "Hash": "AViLUK+DYsGDBVqGI2f4sCsrHbGQ9wJe2tRU0J3disc=",
   "Source": "BrainerHubDemo",
   "BasePath": "_content/BrainerHubDemo",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "BrainerHubDemo\\wwwroot",
+      "Source": "BrainerHubDemo",
+      "ContentRoot": "D:\\brainerhub-demo\\BrainerHubDemoSample\\wwwroot\\",
+      "BasePath": "_content/BrainerHubDemo",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\brainerhub-demo\\BrainerHubDemoSample\\wwwroot\\uploads\\cow1.jpg",
+      "SourceId": "BrainerHubDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\brainerhub-demo\\BrainerHubDemoSample\\wwwroot\\",
+      "BasePath": "_content/BrainerHubDemo",
+      "RelativePath": "uploads/cow1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cow1.jpg"
+    },
+    {
+      "Identity": "D:\\brainerhub-demo\\BrainerHubDemoSample\\wwwroot\\uploads\\cow2 (2).jpg",
+      "SourceId": "BrainerHubDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\brainerhub-demo\\BrainerHubDemoSample\\wwwroot\\",
+      "BasePath": "_content/BrainerHubDemo",
+      "RelativePath": "uploads/cow2 (2).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cow2 (2).jpg"
+    },
+    {
+      "Identity": "D:\\brainerhub-demo\\BrainerHubDemoSample\\wwwroot\\uploads\\cow2.jpg",
+      "SourceId": "BrainerHubDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\brainerhub-demo\\BrainerHubDemoSample\\wwwroot\\",
+      "BasePath": "_content/BrainerHubDemo",
+      "RelativePath": "uploads/cow2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cow2.jpg"
+    },
+    {
+      "Identity": "D:\\brainerhub-demo\\BrainerHubDemoSample\\wwwroot\\uploads\\cowcare.png",
+      "SourceId": "BrainerHubDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\brainerhub-demo\\BrainerHubDemoSample\\wwwroot\\",
+      "BasePath": "_content/BrainerHubDemo",
+      "RelativePath": "uploads/cowcare.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cowcare.png"
+    },
+    {
+      "Identity": "D:\\brainerhub-demo\\BrainerHubDemoSample\\wwwroot\\uploads\\download (2).jpg",
+      "SourceId": "BrainerHubDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\brainerhub-demo\\BrainerHubDemoSample\\wwwroot\\",
+      "BasePath": "_content/BrainerHubDemo",
+      "RelativePath": "uploads/download (2).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\download (2).jpg"
+    }
+  ]
 }
