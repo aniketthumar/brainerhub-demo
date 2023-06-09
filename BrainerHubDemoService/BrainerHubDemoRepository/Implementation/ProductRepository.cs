@@ -142,10 +142,12 @@ namespace BrainerHubDemoService.BrainerHubDemoRepository.Implementation
         {
             var product = await _brainerHubContex.Products.SingleOrDefaultAsync(x => x.ProductId != productId);
 
-            if (product != null)
+            if (product == null)
             {
-                _brainerHubContex.Products.RemoveRange(product);
+                throw new HttpStatusCodeException(StatusCodes.Status401Unauthorized, "Product not found.");
             }
+            _brainerHubContex.Products.Remove(product);
+            await _brainerHubContex.SaveChangesAsync();
         }
         #endregion
     }

@@ -59,6 +59,20 @@ namespace BrainerHubDemo.Controllers.V1
         {
 
             var list = await _productRepository.List(model);
+
+            if (list != null && list.Count > 0) {
+                foreach (var item in list)
+                {
+                    if(item.ProductImages != null && item.ProductImages.Count > 0)
+                    {
+                        foreach (var inneritem in item.ProductImages)
+                        {
+                            inneritem.ImageUrl = _hostingEnvironment.ContentRootPath + inneritem.ImageUrl;
+                        }
+                    }
+                }
+            }
+
             return Ok(list);
         }
         #endregion
@@ -158,7 +172,7 @@ namespace BrainerHubDemo.Controllers.V1
         [HttpPut]
         [Authorize]
         [Route("{product_id}")]
-        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(UnauthorizedResponse), StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(NotFoundResponse), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(BadRequestResponse), StatusCodes.Status400BadRequest)]
@@ -230,6 +244,31 @@ namespace BrainerHubDemo.Controllers.V1
         }
         #endregion
 
-        
+        #region Delete
+        /// <summary>
+        /// Get Product Delete
+        /// </summary>                
+        /// <response code="200">OK: The request was successful and the response body contains the representation requested.</response>
+        /// <response code="400">BAD REQUEST: The data given in the POST or PUT failed validation. Inspect the response body for details.</response>
+        /// <response code="401">UNAUTHORIZED: The supplied credentials, if any, are not sufficient to access the resource.</response>
+        /// <response code="404">NOT FOUND</response>
+        /// <response code="500">SERVER ERROR: We couldn't return the representation due to an internal server error.</response>
+        [HttpDelete]
+        [Route("{product_id}/delete")]
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(UnauthorizedResponse), StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(typeof(NotFoundResponse), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(BadRequestResponse), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(InternalServerErrorReponse), StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Deletestudent([FromRoute][Required] int product_id)
+        {
+
+            await _productRepository.Delete(product_id);
+            return StatusCode(StatusCodes.Status204NoContent);
+        }
+        #endregion
+
+
     }
 }
