@@ -4,24 +4,6 @@
         <name>BrainerHubDemo</name>
     </assembly>
     <members>
-        <member name="T:BrainerHubDemo.Controllers.BaseController">
-            <summary>
-            BaseController inherits ControllerBase
-            </summary>
-        </member>
-        <member name="M:BrainerHubDemo.Controllers.BaseController.ToEscapeXml(System.String)">
-            <summary>
-            ToEscapeXml
-            </summary>
-            <param name="s"></param>
-            <returns></returns>
-        </member>
-        <member name="M:BrainerHubDemo.Controllers.BaseController.GetFormData">
-            <summary>
-            GetFormData
-            </summary>
-            <returns></returns>
-        </member>
         <member name="T:BrainerHubDemo.Controllers.V1.AuthenticationController">
             <summary>
             AuthenticationController

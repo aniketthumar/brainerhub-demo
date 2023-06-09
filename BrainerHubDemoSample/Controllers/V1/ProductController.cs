@@ -12,6 +12,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 using Connectedcow.Model.RequestModel;
 using Microsoft.AspNetCore.Authorization;
+using BrainerHubDemoModel.DbEntities;
 
 namespace BrainerHubDemo.Controllers.V1
 {
@@ -49,7 +50,7 @@ namespace BrainerHubDemo.Controllers.V1
         [HttpGet]
         [Route("list")]
         [Authorize]
-        [ProducesResponseType(typeof(StudentListResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<Product>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(UnauthorizedResponse), StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(NotFoundResponse), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(BadRequestResponse), StatusCodes.Status400BadRequest)]

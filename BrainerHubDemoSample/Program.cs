@@ -38,7 +38,7 @@ namespace BrainerHubDemo
                        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
                        );
             var _configuration = builder.Configuration;
-            
+
             #region Set DB Connection
             string? connectionstring = _configuration.GetConnectionString("DefaultConnection");
 
@@ -109,11 +109,11 @@ namespace BrainerHubDemo
                     {
                         var jwtToken = context.SecurityToken as JwtSecurityToken;
                         context.Request.Headers[ClaimTypes.Email] = jwtToken.Claims.Where(x => x.Type == ClaimTypes.Email).FirstOrDefault().Value;
-       
+
                         var GivenName = jwtToken.Claims.Where(x => x.Type == ClaimTypes.GivenName).FirstOrDefault()?.Value;
                         if (string.IsNullOrWhiteSpace(GivenName))
                         {
-                         
+
                             context.Request.Headers[JWTClaimParameters.UserId] = jwtToken.Claims.Where(x => x.Type == JWTClaimParameters.UserId).FirstOrDefault().Value;
                         }
                         return Task.CompletedTask;
